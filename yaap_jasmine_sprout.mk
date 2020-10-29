@@ -24,29 +24,31 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
-# Inherit Carbon GSM telephony parts
-$(call inherit-product, vendor/carbon/config/gsm.mk)
+# Inherit some common stuff from YAAP
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
-# Inherit Carbon product configuration
-$(call inherit-product, vendor/carbon/config/common.mk)
+# Gapps
+$(call inherit-product-if-exists, vendor/google/gms/config.mk)
+$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
+USE_GAPPS := true
+IS_PHONE := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_STOCK_ARCORE := true
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
-
-# CarbonRom Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.carbon.maintainer="Rcstar6696"
 
 # Build Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="jasmine-user 9 PKQ1.180904.001 V10.0.9.0.PDIMIXM release-keys"
 
-# Density
-TARGET_SCREEN_DENSITY := 400
-
 # Device identifier
 PRODUCT_BRAND := xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := carbon_jasmine_sprout
+PRODUCT_NAME := yaap_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
+
+# TWRP Support
+BUILD_TWRP := true
