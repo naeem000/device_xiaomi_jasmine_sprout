@@ -15,11 +15,11 @@
 # limitations under the License.
 #
 
-# inherit MI A2 device config for Project Fluid
+# inherit MI A2 device config for dotOS
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/fluid_jasmine_sprout.mk
+    $(LOCAL_DIR)/dot_jasmine_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    fluid_jasmine_sprout-user \
-    fluid_jasmine_sprout-userdebug \
-    fluid_jasmine_sprout-eng
+    dot_jasmine_sprout-user \
+    dot_jasmine_sprout-userdebug \
+    dot_jasmine_sprout-eng \
