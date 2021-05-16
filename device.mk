@@ -31,7 +31,7 @@ DEVICE_PATH := device/xiaomi/jasmine_sprout
 ENABLE_AB := true
 
 # APEX
-ENABLE_APEX := true
+ENABLE_APEX := false
 
 # POWERHINT VARIANT
 EAS_POWERHINT_VARIANT := sdm660
