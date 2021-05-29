@@ -43,6 +43,7 @@ PRODUCT_MODEL := Mi A2
 # Inherit dotOS Official build stuff.
 DOT_OFFICIAL := true
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Gapps
 WITH_GAPPS := true
