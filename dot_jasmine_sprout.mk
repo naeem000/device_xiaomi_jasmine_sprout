@@ -54,5 +54,3 @@ TARGET_SUPPORTS_STOCK_ARCORE := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# TWRP Support
-BUILD_TWRP := true
