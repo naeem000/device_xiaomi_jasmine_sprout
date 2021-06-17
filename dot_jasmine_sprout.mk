@@ -41,12 +41,10 @@ PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
 
 # Inherit dotOS Official build stuff.
-DOT_OFFICIAL := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Gapps
-WITH_GAPPS := true
 IS_PHONE := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
