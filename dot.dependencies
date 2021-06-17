@@ -1,0 +1,18 @@
+[
+  {
+    "repository" : "vendor_xiaomi_sdm660-common-jasmine",
+    "target_path": "vendor/xiaomi/sdm660-common"
+  },
+  {
+    "repository" : "vendor_xiaomi_wayne-common-jasmine",
+    "target_path": "vendor/xiaomi/wayne-common"
+  },
+  {
+    "repository" : "device_xiaomi_sdm660-common-jasmine",
+    "target_path": "device/xiaomi/sdm660-common"
+  },
+  {
+    "repository" : "device_xiaomi_wayne-common-jasmine",
+    "target_path": "device/xiaomi/wayne-common"
+  }
+]
