@@ -63,7 +63,8 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay
+    $(DEVICE_PATH)/overlay \
+    $(DEVICE_PATH)/overlay-legion
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -107,8 +108,8 @@ $(call inherit-product, build/target/product/verity.mk)
 $(call inherit-product, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
 
 # AOSP DEVICE
-PRODUCT_NAME := aosp_jasmine_sprout
+PRODUCT_NAME := legion_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
-PRODUCT_MODEL := Mi A2 (AOSP)
+PRODUCT_MODEL := Mi A2
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
