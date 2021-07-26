@@ -1,6 +1,7 @@
 #
 # Copyright (C) 2018 The LineageOS Project
 # Copyright (C) 2018-2021 Xiaomi-SDM660 Project
+# Copyright (C) 2018-2021 EvolutionX
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,11 +16,11 @@
 # limitations under the License.
 #
 
-# inherit MI A2 device config for dotOS
+# inherit MI A2 device config for EvolutionX
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/dot_jasmine_sprout.mk
+    $(LOCAL_DIR)/evolution_jasmine_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    dot_jasmine_sprout-user \
-    dot_jasmine_sprout-userdebug \
-    dot_jasmine_sprout-eng \
+    evolution_jasmine_sprout-user \
+    evolution_jasmine_sprout-userdebug \
+    evolution_jasmine_sprout-eng \

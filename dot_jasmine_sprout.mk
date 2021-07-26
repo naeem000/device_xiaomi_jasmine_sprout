@@ -1,6 +1,7 @@
 #
 # Copyright (C) 2018 The LineageOS Project
 # Copyright (C) 2018-2021 Xiaomi-SDM660 Project
+# Copyright (C) 2018-2021 EvolutionX
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,8 +18,8 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
-# Inherit dotOS product configuration
-$(call inherit-product, vendor/dot/config/common.mk)
+# Inherit EvolutionX product configuration
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -36,11 +37,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := dot_jasmine_sprout
+PRODUCT_NAME := evolution_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
 
-# Inherit dotOS Official build stuff.
+# Inherit EvolutionX build stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
