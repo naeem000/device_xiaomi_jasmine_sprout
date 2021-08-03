@@ -1,7 +1,5 @@
 #
-# Copyright (C) 2018 The LineageOS Project
 # Copyright (C) 2018-2021 Xiaomi-SDM660 Project
-# Copyright (C) 2018-2021 EvolutionX
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,16 +13,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit device configuration
-$(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
-
-# Inherit EvolutionX product configuration
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
+
+# Inherit device configuration
+$(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
+
+# Inherit some common RevengeOS stuff
+$(call inherit-product, vendor/revengeos/config/common.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Build Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -37,19 +37,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := evolution_jasmine_sprout
+PRODUCT_NAME := revengeos_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
-
-# Inherit EvolutionX build stuff.
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_FACE_UNLOCK_SUPPORTED := true
-
-# Gapps
-IS_PHONE := true
-TARGET_GAPPS_ARCH := arm64
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_SUPPORTS_STOCK_ARCORE := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
