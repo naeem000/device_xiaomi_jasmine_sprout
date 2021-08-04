@@ -43,3 +43,6 @@ PRODUCT_MODEL := Mi A2
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+#TWRP
+include recovery/twrp/xiaomi/jasmine_sprout/twrp.mk
+
