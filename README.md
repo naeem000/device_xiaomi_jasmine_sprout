@@ -1,4 +1,4 @@
-Copyright (C) 2018 Xiaomi-SDM660 Project
+Copyright (C) 2021 Paranoid Android
 
 The MI A2 (codenamed _"jasmine_sprout"_) is a mid-range phone from Xiaomi.
 
@@ -22,4 +22,4 @@ Front Camera   | 20 MP
 
 ## Device picture
 
-![Xiaomi MI 6X](https://img.staticbg.com/thumb/large/oaupload/banggood/images/90/CB/781c0a93-de94-4010-86c8-5b9f846f4aa4.jpg "Xiaomi MI A2")
+![Xiaomi MI A2](https://img.staticbg.com/thumb/large/oaupload/banggood/images/90/CB/781c0a93-de94-4010-86c8-5b9f846f4aa4.jpg "Xiaomi MI A2")

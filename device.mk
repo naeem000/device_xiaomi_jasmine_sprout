@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2018 The Xiaomi-SDM660 Project
-# Copyright (C) 2020 Paranoid Android
+# Copyright (C) 2021 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,99 +22,22 @@
 #
 
 # Inherit the fusion-common definitions
-$(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
-
-# Define first api level
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
-
-IS_BRINGUP := true
+$(call inherit-product, device/xiaomi/wayne-common/wayne-common.mk)
 
 # Device Path
 DEVICE_PATH := device/xiaomi/jasmine_sprout
 
-# Kernel
-TARGET_KERNEL_VERSION := 4.19
-
 # A/B
 ENABLE_AB := true
-
-# Audio
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
-    $(DEVICE_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
-
-# Camera
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml
-
-PRODUCT_PACKAGES += \
-    camera.sdm660 \
-    libmm-qcamera
-
-# Consumerir
-PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service
-
-# Dalvik
-$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
-
-# Device properties
-$(call inherit-product, $(DEVICE_PATH)/device_prop.mk)
-
-# Display
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/display/qdcm_calib_data_jdi_nt36672_fhd_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_jdi_nt36672_fhd_video_mode_dsi_panel.xml \
-    $(DEVICE_PATH)/configs/display/qdcm_calib_data_tianma_nt36672_fhd_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_tianma_nt36672_fhd_video_mode_dsi_panel.xml
 
 # Fstab
 PRODUCT_PACKAGES += \
     fstab.qcom
 
-# Init
-ifeq ($(TARGET_KERNEL_VERSION),4.19)
-PRODUCT_PACKAGES += \
-    init.jasmine_sprout.rc
-endif
-
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPAJasmineSettings \
-    JasmineFrameworks \
-    JasmineSystemUI \
     JasmineWifi
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
-
-# QTI common
-TARGET_COMMON_QTI_COMPONENTS := \
-    vibrator
-
-# Screen density
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# SD Card
-PRODUCT_CHARACTERISTICS := nosdcard
-
-# Sensors
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
-
-# Thermal
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/thermal/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
-
-# Verity
-PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/c0c4000.sdhci/by-name/system
-PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc/c0c4000.sdhci/by-name/vendor
-$(call inherit-product, build/target/product/verity.mk)
-
-# Vendor files
-$(call inherit-product, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)

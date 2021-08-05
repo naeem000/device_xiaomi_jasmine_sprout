@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2021 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,17 +23,9 @@ fi
 
 set -e
 
-DEVICE_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$DEVICE_DIR" ]]; then DEVICE_DIR="$PWD"; fi
-export DEVICE_DIR
-
-export IS_COMMON=true
-export GUARDED_DEVICES="jasmine_sprout wayne"
-
 # Required!
-export DEVICE=wayne-common
+export DEVICE=jasmine_sprout
+export DEVICE_SPECIFIED_COMMON=wayne-common
+export VENDOR=xiaomi
 
-DEVICE_COMMON=sdm660-common
-VENDOR=xiaomi
-
-"./../../${VENDOR}/${DEVICE_COMMON}/extract-files.sh" "$@"
+"./../../${VENDOR}/${DEVICE_SPECIFIED_COMMON}/extract-files.sh" "$@"
