@@ -14,11 +14,11 @@
 # limitations under the License.
 #
 
-# inherit MI A2 device config for RevengeOS
+# inherit MI A2 device config for Project-404
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/revengeos_jasmine_sprout.mk
+    $(LOCAL_DIR)/p404_jasmine_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    revengeos_jasmine_sprout-user \
-    revengeos_jasmine_sprout-userdebug \
-    revengeos_jasmine_sprout-eng \
+    p404_jasmine_sprout-user \
+    p404_jasmine_sprout-userdebug \
+    p404_jasmine_sprout-eng \
