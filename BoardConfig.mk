@@ -23,6 +23,9 @@
 
 include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
+# ART
+BOARD_USES_SYSTEM_OTHER_ODEX := true
+
 # Device Path
 DEVICE_PATH := device/xiaomi/jasmine_sprout
 

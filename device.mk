@@ -33,6 +33,13 @@ ENABLE_AB := true
 # APEX
 ENABLE_APEX := false
 
+# ART
+PRODUCT_PACKAGES += \
+     cppreopts.sh
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.cp_system_other_odex=1 \
+     pm.dexopt.ab-ota=speed-profile
+
 # POWERHINT VARIANT
 EAS_POWERHINT_VARIANT := sdm660
 
