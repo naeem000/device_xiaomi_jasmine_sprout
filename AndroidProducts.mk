@@ -1,5 +1,4 @@
 #
-# Copyright (C) 2018 The LineageOS Project
 # Copyright (C) 2018-2021 Xiaomi-SDM660 Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,11 +14,11 @@
 # limitations under the License.
 #
 
-# inherit MI A2 device config for ShapeShiftOS
+# inherit MI A2 device config for Evolution-X
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ssos_jasmine_sprout.mk
+    $(LOCAL_DIR)/evolution_jasmine_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    ssos_jasmine_sprout-user \
-    ssos_jasmine_sprout-userdebug \
-    ssos_jasmine_sprout-eng
+    evolution_jasmine_sprout-user \
+    evolution_jasmine_sprout-userdebug \
+    evolution_jasmine_sprout-eng
