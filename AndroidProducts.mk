@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2018 The Xiaomi-SDM660 Project
-# Copyright (C) 2018-2021 Project-LegionOS
+# Copyright (C) 2020-2021 The Evolution X Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,11 +22,11 @@
 # definition file).
 #
 
-# Inherit MI A2 LegionOS device config
+# Inherit MI A2 Evolution-X device config
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/legion_jasmine_sprout.mk
+    $(LOCAL_DIR)/evolution_jasmine_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    legion_jasmine_sprout-eng \
-    legion_jasmine_sprout-userdebug \
-    legion_jasmine_sprout-eng
+    evolution_jasmine_sprout-eng \
+    evolution_jasmine_sprout-userdebug \
+    evolution_jasmine_sprout-eng
