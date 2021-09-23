@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2021 Xiaomi-SDM660 Project
+# Copyright (C) 2018-2021 PixelBlaster-OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,11 +14,11 @@
 # limitations under the License.
 #
 
-# inherit MI A2 device config for Evolution-X
+# inherit MI A2 device config for PixelBlaster-OS
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_jasmine_sprout.mk
+    $(LOCAL_DIR)/aosp_jasmine_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_jasmine_sprout-user \
-    evolution_jasmine_sprout-userdebug \
-    evolution_jasmine_sprout-eng
+    aosp_jasmine_sprout-user \
+    aosp_jasmine_sprout-userdebug \
+    aosp_jasmine_sprout-eng
