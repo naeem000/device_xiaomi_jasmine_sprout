@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2021 Xiaomi-SDM660 Project
+# Copyright (C) 2018-2021 PixelBlaster-OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,9 +15,6 @@
 
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
-
-# Inherit Evolution-X product configuration
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -36,18 +33,17 @@ BUILD_FINGERPRINT := "xiaomi/wayne/wayne:8.1.0/OPM1.171019.011/V9.5.11.0.ODCCNFA
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := evolution_jasmine_sprout
+PRODUCT_NAME := aosp_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
 
-# Inherit Evolution-X build stuff.
-EVO_BUILD_TYPE := OFFICIAL
-EVO_MAINTAINER := Naeem Mansuri
-USE_GAPPS := true
-IS_PHONE := true
+# Inherit PixelBlaster-OS build stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+BLASTER_BUILD_TYPE := OFFICIAL
+WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
-TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
-#TWRP
-include recovery/twrp/xiaomi/jasmine_sprout/twrp.mk
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
