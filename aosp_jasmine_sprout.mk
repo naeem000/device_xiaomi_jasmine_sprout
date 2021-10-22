@@ -30,22 +30,10 @@ PRODUCT_MODEL := Mi A2
 # Inherit PixelBlaster-OS build stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 BLASTER_BUILD_TYPE := OFFICIAL
-BLASTER_BUILD_VARIANT := GAPPS
+USE_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
-# PixelBlaster-OS
-PRODUCT_PRODUCT_PROPERTIES += \
-        ro.pb.maintainer= Naeem Mansuri \
-        ro.pb.soc= SDM660 \
-        ro.pb.camera= 12MP+20MP,20MP \
-        ro.pb.version= 3.5 \
-        ro.pb.codename= jasmine_sprout \
-        ro.pb.device= Xiaomi Mi A2 \
-        ro.pb.cores= 8       
-
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-#TWRP
-include recovery/twrp/xiaomi/jasmine_sprout/twrp.mk
