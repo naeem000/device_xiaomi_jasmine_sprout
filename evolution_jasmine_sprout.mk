@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2021 PixelBlaster-OS
+# Copyright (C) 2018-2021 The Evolution X Project
 #
 # SPDX-License-Identifier: Apache-2.0
 
@@ -22,17 +22,16 @@ BUILD_FINGERPRINT := "xiaomi/wayne/wayne:8.1.0/OPM1.171019.011/V9.5.11.0.ODCCNFA
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := aosp_jasmine_sprout
+PRODUCT_NAME := evolution_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
 
-# Inherit PixelBlaster-OS build stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-BLASTER_BUILD_TYPE := OFFICIAL
+# Inherit Evolution-X build stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+EVO_BUILD_TYPE := UNOFFICIAL
 USE_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_FACE_UNLOCK_SUPPORTED := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
