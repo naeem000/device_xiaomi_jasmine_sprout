@@ -26,7 +26,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 
 # Build Description
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="jasmine-user 9 PKQ1.180904.001 V10.0.9.0.PDIMIXM release-keys"
+    PRIVATE_BUILD_DESC="jasmine-user 9 PKQ1.180904.001 V10.0.9.0.PDIMIXM release-keys" \
+    PRODUCT_NAME="jasmine_sprout" \
+    TARGET_DEVICE="jasmine_sprout"
+
+# Build Fingerprint
+BUILD_FINGERPRINT := "xiaomi/wayne/wayne:8.1.0/OPM1.171019.011/V9.5.11.0.ODCCNFA:user/release-keys"
 
 # Device identifier
 PRODUCT_BRAND := Xiaomi
@@ -43,11 +48,6 @@ IS_PHONE := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 1080
-
-PRODUCT_PRODUCT_PROPERTIES += \
-  ro.evolution.cpu=SDM660
-
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 #TWRP
 include recovery/twrp/xiaomi/jasmine_sprout/twrp.mk
