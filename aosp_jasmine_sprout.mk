@@ -21,31 +21,31 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
-# Inherit some common Project-404 stuff
-$(call inherit-product, vendor/404/config/common.mk)
+# Inherit some common PPUI stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+CUSTOM_BUILD_TYPE := OFFICIAL
 
 $(call inherit-product, vendor/google/pixel/config.mk)
 $(call inherit-product, vendor/google/gms/config.mk)
 
-# Build Fingerprint
+# Build Description
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="redfin-user 11 RQ3A.210905.001 7511028 release-keys" \
-    BUILD_FINGERPRINT="google/redfin/redfin:11/RQ3A.210905.001/7511028:user/release-keys"
+    PRIVATE_BUILD_DESC="coral-user 12 SP1A.211105.002 7743617 release-keys"
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+# Build Fingerprint
+BUILD_FINGERPRINT := "google/coral/coral:12/SP1A.211105.002/7743617:user/release-keys"
 
 # Device identifier
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := p404_jasmine_sprout
-PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
+PRODUCT_NAME := aosp_jasmine_sprout
+PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_DEVICE := jasmine_sprout
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-#TWRP
-include recovery/twrp/xiaomi/jasmine_sprout/twrp.mk
 

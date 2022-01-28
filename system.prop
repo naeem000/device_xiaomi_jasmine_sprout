@@ -1,2 +1,9 @@
 persist.vendor.camera.exif.model=Mi A2
 persist.sys.exif.model=Mi A2
+
+# PixelPlusUI OFFICIAL
+ ro.ppui.device_name=Xiaomi MiA2
+ ro.ppui.version=3.11
+ ro.ppui.version_code=Ignite
+ ro.ppui.is_official=true
+ ro.ppui.maintainer_name=naeem000
