@@ -5,11 +5,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# inherit MI A2 device config for ShapeShiftOS
+# inherit MI A2 device config for Project-Awaken
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ssos_jasmine_sprout.mk
+    $(LOCAL_DIR)/awaken_jasmine_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    ssos_jasmine_sprout-user \
-    ssos_jasmine_sprout-userdebug \
-    ssos_jasmine_sprout-eng
+    awaken_jasmine_sprout-user \
+    awaken_jasmine_sprout-userdebug \
+    awaken_jasmine_sprout-eng
