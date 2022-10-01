@@ -5,11 +5,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# inherit MI A2 device config for tequilaOS
+# inherit MI A2 device config for SparkOS
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/tequila_jasmine_sprout.mk
+    $(LOCAL_DIR)/spark_jasmine_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    tequila_jasmine_sprout-user \
-    tequila_jasmine_sprout-userdebug \
-    tequila_jasmine_sprout-eng
+    spark_jasmine_sprout-user \
+    spark_jasmine_sprout-userdebug \
+    spark_jasmine_sprout-eng

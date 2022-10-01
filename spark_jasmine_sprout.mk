@@ -7,8 +7,8 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
-# Inherit tequilaOS product configuration
-$(call inherit-product, vendor/tequila/config/common_full_phone.mk)
+# Inherit SparkOS product configuration
+$(call inherit-product, vendor/spark/config/common_full_phone.mk)
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -24,18 +24,14 @@ BUILD_FINGERPRINT := "xiaomi/wayne/wayne:8.1.0/OPM1.171019.011/V9.5.11.0.ODCCNFA
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := tequila_jasmine_sprout
+PRODUCT_NAME := spark_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Spark flags
+WITH_GAPPS := true
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# GApps
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_STOCK_ARCORE := true
-
-# tequila
-TEQUILA_BUILDTYPE := OFFICIAL
-
-# TWRP Support
-BUILD_TWRP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
