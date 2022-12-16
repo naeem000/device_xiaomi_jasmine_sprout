@@ -2,7 +2,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2017-2020 The LineageOS Project
-# Copyright (C) 2022 tequilaOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #

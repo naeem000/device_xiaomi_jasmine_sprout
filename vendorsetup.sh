@@ -1,6 +1,6 @@
-rm -rf hardware/qcom-caf/msm8998/display
-rm -rf hardware/qcom-caf/msm8998/media
-rm -rf hardware/qcom-caf/msm8998/audio
-git clone https://github.com/tequilaOS/platform_hardware_qcom-caf_sdm660_display.git hardware/qcom-caf/msm8998/display
-git clone https://github.com/tequilaOS/platform_hardware_qcom-caf_sdm660_media.git hardware/qcom-caf/msm8998/media
-git clone https://github.com/tequilaOS/platform_hardware_qcom-caf_sdm660_audio.git hardware/qcom-caf/msm8998/audio
+rm -rf hardware/qcom/display
+rm -rf hardware/qcom/media
+rm -rf hardware/qcom/audio
+git clone https://github.com/P404-lavender/android_hardware_qcom_display.git hardware/qcom/display
+git clone https://github.com/P404-lavender/android_hardware_qcom_media.git hardware/qcom/media
+git clone https://github.com/P404-lavender/android_vendor_qcom_opensource_audio-hal_primary-hal.git vendor/qcom/opensource/audio-hal/primary-hal

@@ -13,8 +13,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+
 cc_library {
-    name: "libgptutils.jasmine_sprout",
+    name: "libgptutils.sdm660",
     vendor: true,
     recovery_available: true,
     shared_libs: [
